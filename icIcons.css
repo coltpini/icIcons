@@ -1,0 +1,11 @@
+.icContainer {
+	position: relative;
+	height: 1em;
+	width: 1em;
+	padding: 0.2em;
+	display: inline-block;
+}
+
+.icIcon {
+	position: absolute;
+}
