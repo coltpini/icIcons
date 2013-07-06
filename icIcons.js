@@ -16,11 +16,11 @@ IcIcons.prototype.inject = function(){
 			}
 			var i = 0;
 			for(i=0; i<t.length;i++){
-				cont += '<span class="icIcon ic' + i + '">' + t[i] + "</span>";
+				cont += '<span class="icLayer ic' + i + '">' + t[i] + "</span>";
 			}
 			for(i=0; i<elems.length;i++){
 				var elem = elems[i];
-				elem.setAttribute("class", "icContainer");
+				elem.setAttribute("class", "icIcon");
 				elem.innerHTML = cont;
 			}
 		}

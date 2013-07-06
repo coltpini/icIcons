@@ -1,11 +1,93 @@
-.icContainer {
-	position: relative;
-	height: 1em;
-	width: 1em;
-	padding: 0.2em;
-	display: inline-block;
+@font-face {
+    font-family: 'chIconsRegular';
+    src: url('fonts/chicons-regular-webfont.eot');
+    src: url('fonts/chicons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/chicons-regular-webfont.woff') format('woff'),
+         url('fonts/chicons-regular-webfont.ttf') format('truetype'),
+         url('fonts/chicons-regular-webfont.svg#chIconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .icIcon {
-	position: absolute;
+    position: relative;
+	height: 7em;
+	width: 6em;
+	padding: 0.2em;
+	display: inline-block;
+	cursor: pointer;
+	margin: 6px;
+}
+
+.icLayer {
+    position: absolute;
+    font-family: 'chIconsRegular';
+    font-size: 10em;
+    color: #666;
+
+    -webkit-transition: color 300ms ease-out;  /* Saf3.2+, Chrome */
+       -moz-transition: color 300ms ease-out;  /* FF4+ */
+        -ms-transition: color 300ms ease-out;  /* IE10 */
+         -o-transition: color 300ms ease-out;  /* Opera 10.5+ */
+            transition: color 300ms ease-out;
+
+}
+
+.ic1 {
+    color: #999;
+}
+
+.icIcon:hover .icLayer{
+    color: #369;
+}
+
+.icIcon:hover .icLayer.ic1, .icIcon:hover .icLayer.ic3  {
+    color: #69f;
+}
+.ic3 {
+    color: #999;
+}
+icprint .ic2, icprint .ic4 {
+    color: #fff;
+}
+
+icprint .ic5 {
+    color: #0f0 !important;
+    z-index: 2000;
+}
+
+icprint .ic7 {
+    color: #fff
+}
+
+icprint:hover  .icLayer.ic1, .icprint:hover .icLayer.ic3 {
+    color: #69f;
+}
+
+icprint:hover .icLayer.ic2, icprint:hover .icLayer.ic4 {
+    color: #fff;
+}
+
+icprint:hover .icLayer.ic7 {
+    color: #fff;
+}
+
+icprint:hover .icLayer.ic8 {
+    color: #0c0;
+}
+
+icprint .icLayer.ic5, icprint .icLayer.ic3, icprint .icLayer.ic4 {
+    margin: 0;
+    opacity: 0;
+}
+
+icprint.active .icLayer.ic5, icprint.active .icLayer.ic3, icprint.active .icLayer.ic4 {
+    -webkit-transition: all 1s ease-out;  /* Saf3.2+, Chrome */
+       -moz-transition: all 1s ease-out;  /* FF4+ */
+        -ms-transition: all 1s ease-out;  /* IE10 */
+         -o-transition: all 1s ease-out;  /* Opera 10.5+ */
+            transition: all 1s ease-out;
+
+    margin: 1ex 0 0 0;
+    opacity: 0.8;
 }

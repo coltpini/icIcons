@@ -8,10 +8,23 @@
 	</head>
 	<body>
 		<icprint></icprint>
-		<ictweet></ictweet>
+		<icfit></icfit>
+        <icfitwidth></icfitwidth>
+        <icfitheight></icfitheight>
+        <icactualsize></icactualsize>
+        <icdownload></icdownload>
 		<script>
 			var icIcons = new IcIcons({config:icConfig});
 			icIcons.inject();
+
+            var printHandler = function (e){
+				this.classList.add('active');
+				setTimeout(function(){document.querySelector('icprint.active').classList.remove('active');}, 1500);
+			};
+
+            document.querySelector('icprint').addEventListener('click',printHandler);
+
+
 		</script>
 	</body>
 </html>
