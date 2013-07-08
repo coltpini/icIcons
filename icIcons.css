@@ -37,11 +37,12 @@
     color: #999;
 }
 
-.icIcon:hover .icLayer{
+.icIcon:hover .icLayer, .icIcon.active .icLayer{
     color: #369;
 }
 
-.icIcon:hover .icLayer.ic1, .icIcon:hover .icLayer.ic3  {
+.icIcon:hover .icLayer.ic1, .icIcon:hover .icLayer.ic3,
+.icIcon.active .icLayer.ic1, .icIcon.active .icLayer.ic3   {
     color: #69f;
 }
 .ic3 {
@@ -60,19 +61,21 @@ icprint .ic7 {
     color: #fff
 }
 
-icprint:hover  .icLayer.ic1, .icprint:hover .icLayer.ic3 {
+icprint:hover  .icLayer.ic1, .icprint:hover .icLayer.ic3,
+icprint.active  .icLayer.ic1, .icprint.active .icLayer.ic3 {
     color: #69f;
 }
 
-icprint:hover .icLayer.ic2, icprint:hover .icLayer.ic4 {
+icprint:hover .icLayer.ic2, icprint:hover .icLayer.ic4,
+icprint.active .icLayer.ic2, icprint.active .icLayer.ic4 {
     color: #fff;
 }
 
-icprint:hover .icLayer.ic7 {
+icprint:hover .icLayer.ic7, icprint.active .icLayer.ic7 {
     color: #fff;
 }
 
-icprint:hover .icLayer.ic8 {
+icprint:hover .icLayer.ic8, icprint.active .icLayer.ic8 {
     color: #0c0;
 }
 
