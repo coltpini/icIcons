@@ -18,11 +18,20 @@
 			icIcons.inject();
 
             var printHandler = function (e){
-				this.classList.add('active');
-				setTimeout(function(){document.querySelector('icprint.active').classList.remove('active');}, 1500);
+				var _t = this,
+				    dur = 300;
+				if(_t.tagName.toLowerCase() === "icprint")
+				    dur = 1500;
+
+				_t.classList.add('active');
+				setTimeout(function(){_t.classList.remove('active');}, dur);
 			};
 
-            document.querySelector('icprint').addEventListener('click',printHandler);
+            var icons = document.querySelectorAll('.icIcon'),
+                i = icons.length;
+            while(i--){
+                icons[i].addEventListener('click',printHandler);
+            }
 
 
 		</script>
